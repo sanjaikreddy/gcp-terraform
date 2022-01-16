@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  # Configuration options
+  ##Configuration options
   project = "terraform-gcp-326702"
   region = "us-central1"
   zone = "us-central1-a"
