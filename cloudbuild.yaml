@@ -34,14 +34,14 @@ steps:
         cd gcp-terraform/$BRANCH_NAME
         terraform init
       else
-        for dir in GCS/*/
+        for dir in gcp-terraform/*/
         do 
           cd ${dir}   
           gcp-terraform=${dir%*/}
           gcp-terraform=${gcp#*/}
           echo ""
           echo "*************** TERRAFORM INIT ******************"
-          echo "******* At GCS: ${gcp} ********"
+          echo "******* At gcp-terraform: ${gcp} ********"
           echo "*************************************************"
           terraform init || exit 1
           cd ../../
@@ -59,7 +59,7 @@ steps:
         cd gcp-terraform/$BRANCH_NAME
         terraform plan
       else
-        for dir in GCS/*/
+        for dir in gcp-terraform/*/
         do 
           cd ${dir}   
           gcp-terraform=${dir%*/}
